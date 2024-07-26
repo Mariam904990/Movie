@@ -1,0 +1,98 @@
+<section class="main">
+    <div class="container-fluid vh-100 d-flex align-items-center">
+        <div class=" ms-3">
+            <div class="col-6">
+                <div class="master">
+                    <span>Movflx</span>
+                    <h1 class="mb-3">Unlimited <span>Movie</span>, TVs Shows, & More.</h1>
+                    <ul class="list-unstyled d-flex mb-3">
+                        <li class="d-flex justify-content-center align-items-center me-2">
+                            <div class="box pg mx-1">
+                                <p class="m-0">PG18</p>
+                            </div>
+                            <div class="box hd mx-1">
+                                <p class="m-0">HD</p>
+                            </div>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center me-2">
+                            <a class="text-light mx-1">Action,</a>
+                            <a class="text-light mx-1">Comedy</a>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center me-2">
+                            <div class="m-0 d-flex justify-content-center align-items-center"><span class="mx-1"><i
+                                        class="fa-solid fa-calendar-days"></i></span>
+                                <p class="m-0"> 2022</p>
+                            </div>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center me-2">
+                            <div class="m-0 d-flex justify-content-center align-items-center"><span class="mx-1"><i
+                                        class="fa-regular fa-clock"></i></span>
+                                <p class="m-0"> 120min</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="btn btn-main-solid" routerLink="/movies"><i class="fa-solid fa-play me-2"></i> Watch
+                        now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="upcoming">
+    <div class="container py-5">
+        <div class="header ms-4">
+            <span>ONLINE STREAMING</span>
+            <h2 class="display-3">Upcoming Movies</h2>
+        </div>
+        <div class="row py-5">
+            <div class="col-md-3" *ngFor="let movie of this.moviesSummary?.slice(0, 8)">
+                <app-card [element]="movie" [key]="true"></app-card>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tv-show">
+    <app-tv-show></app-tv-show>
+</section>
+
+<section class="top-rated-movies py-5">
+    <div class="container py-5">
+        <div class="header ms-4 text-center">
+            <span>ONLINE STREAMING</span>
+            <h2 class="display-3">Top Rated Movies</h2>
+        </div>
+        <div class="row py-5">
+            <div class="col-md-3" *ngFor="let movie of this.topRatedMovies?.slice(0, 8)">
+                <app-card [element]="movie" [key]="true"></app-card>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="online-streamin">
+    <div class="container py-4">
+        <div class="row flex-row-reverse align-items-center py-5">
+            <div class="col-md-6">
+                <img src="./assets/live_img.png" class="w-100" alt="">
+            </div>
+            <div class="col-md-6 text-dark">
+                <span class="stream-span ms-5 d-flex align-items-center">ONLINE STREAMING</span>
+                <h2 class="display-5 mb-4">Live Movie & TV Shows For Friends & Family</h2>
+                <p>Lorem ipsum dolor sit amet, consecetur adipiscing elseddo eiusmod There are many variations of
+                    passages of lorem Ipsum available, but the majority have suffered alteration.</p>
+                <div class="live d-flex align-items-center mb-3">
+                    <div class="resolution mx-3">
+                        <h3 class="display-4">HD 4K</h3>
+                    </div>
+                    <div class="active-customer">
+                        <h5 class="text-dark display-6">20K+</h5>
+                        <p class="text-dark">Active Customer</p>
+                    </div>
+                </div>
+                <button class="btn btn-main-light" routerLink="/movies"><i class="fa-solid fa-play me-2"></i> Watch
+                    now</button>
+            </div>
+        </div>
+    </div>
+</section>

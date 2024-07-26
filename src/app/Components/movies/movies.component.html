@@ -1,0 +1,35 @@
+<section class="movies-header vh-100 d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5 text-center">
+                <h1 class="display-1"><span>Our</span> Movies</h1>
+                <div class="d-flex justify-content-center align-items-center">
+                    <a routerLink="/home" class="mx-1"><span>Home </span></a>
+                    <p class="m-0"> | Movies</p>
+                </div>
+                <div class="search-bar position-relative d-flex align-items-center">
+                    <input type="text" class="my-3 rounded-pill w-100 px-4" placeholder="Search Your Specific Movie.."
+                        [(ngModel)]="searchTerm">
+                    <button class="btn btn-main-solid position-absolute" (click)="searchForMovies(searchTerm)">Search</button>
+                </div>
+                <i class="fa-solid fa-angles-down d-block"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-sm-6 col-md-3" *ngFor="let item of moviesContainer">
+                <app-card [element]="item" [key]="true"></app-card>
+            </div>
+        </div>
+        <!-- (page)="" -->
+        <div class="container">
+            <mat-paginator #paginator class=" btn-main-solid mat-paginator" (page)="handlePageEvent($event)"
+                [length]="length" [pageSize]="pageSize" [disabled]="false" [showFirstLastButtons]="false"
+                [hidePageSize]="true" [pageIndex]="pageIndex" aria-label="Select page">
+            </mat-paginator>
+        </div>
+    </div>
+</section>

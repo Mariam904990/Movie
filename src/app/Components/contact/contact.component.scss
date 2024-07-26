@@ -1,0 +1,62 @@
+.contact-header {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../../../assets/contact-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.contact-form {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../../assets/tr_movies_bg.jpg') no-repeat center;
+    background-size: cover;
+
+    .border {
+        border: .5px solid #3d3d3d !important;
+    }
+
+    h5 {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 120%;
+            left: 12px;
+            height: 3px;
+            width: 100px;
+            background-color: #E4D804;
+            border-radius: 5px;
+        }
+    }
+
+    input,
+    textarea {
+        background-color: #1F1E24;
+        color: #CCC !important;
+        border: 1px solid transparent;
+        outline: none;
+
+        &:focus {
+            background-color: #1F1E24;
+            border-color: #E4D804;
+            outline: none;
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            color: #ccc;
+        }
+    }
+
+    .card {
+        background-color: #1F1E24;
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: #E4D804;
+            font-size: 25px;
+        }
+
+        .border-bottom {
+            border-bottom: .5px solid #3d3d3d !important;
+        }
+    }
+}

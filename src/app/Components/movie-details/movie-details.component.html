@@ -1,0 +1,51 @@
+<section class="vh-100 py-3">
+    <div class="container py-5">
+        <div class="row py-5 align-items-center">
+            <div class="col-md-3 rounded overflow-hidden p-0">
+                <img [src]="this._MoviesService.path + this.movieDetails?.poster_path" class="w-100" alt="">
+            </div>
+            <div class="col-md-7 offset-1">
+                <div class="header mb-3">
+                    <h2>{{this.movieDetails?.title}}</h2>
+                    <ul class="d-flex list-unstyled mb-4">
+                        <li class="me-2"> <span><i
+                                    class="fa-solid fa-calendar-days me-1"></i></span>{{this.movieDetails?.release_date}}
+                        </li>
+                        <li class="me-2"><span class="genres text-light"
+                                *ngFor="let genre of this.movieDetails?.genres">{{genre.name}}, </span></li>
+                        <li class="me-2">
+                            <span><i
+                                    class="fa-regular fa-clock me-1"></i></span>{{(this.movieDetails?.runtime/60).toFixed()}}h{{(this.movieDetails?.runtime%60)}}m
+                        </li>
+                    </ul>
+                </div>
+                <h5>Rated by <span>{{this.movieDetails?.vote_count}}</span> Users :
+                    {{(this.movieDetails?.vote_average*10).toFixed()}}<span>%</span> Liked this</h5>
+                <span>{{this.movieDetails?.tagline}}</span>
+                <h5 class="mt-5">Overview:</h5>
+                <p>{{this.movieDetails?.overview}}</p>
+                <a href="{{this.movieDetails?.homepage}}"><button class="btn btn-main-solid"><i
+                            class="fa-solid fa-play"></i> Watch Now</button></a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="recommended">
+    <div class="container py-5">
+        <h5>Top Billed Cast</h5>
+        <div class="row recommended-row">
+            <app-carousel [person]="true" [Cartona]="this.castTeam"></app-carousel>
+        </div>
+    </div>
+</section>
+<section class="recommended">
+    <div class="container py-5">
+        <h5>Recommended For You</h5>
+        <div class="row recommended-row">
+            <app-carousel [Cartona]="this.recommendedMovies" [key]="true"></app-carousel>
+            <button class="btn btn-main-solid" routerLink="/movies">See More ></button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+.movies-header {
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url("../../../assets/breadcrumb_bg.jpg") no-repeat center;
+    background-size: cover;
+    input{
+        border: none;
+        outline: none;
+        height: 55px;
+    }
+    .btn-main-solid {
+        // width: 50px !important;
+        // height: 50px !important;
+        right: 4px;
+    }
+}
+
+.content {
+    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)), url("../../../assets/ucm_bg.jpg") no-repeat center;
+    .movies-nav {
+        // border: 1px solid #CCC;
+        box-shadow: 0 0 10px #3e3e3e;
+        li {
+            &:hover {
+                background-color: #4e4d4d;
+            }
+        }
+    }
+}
+.mat-paginator {
+    background-color: #FFF;
+}

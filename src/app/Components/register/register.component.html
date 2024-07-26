@@ -1,0 +1,81 @@
+<section class="m-0">
+    <div class="container">
+        <form (ngSubmit)="register(registerForm)" [formGroup]="registerForm">
+            <div class="row vh-100 align-items-center justify-content-center">
+                <div class="col-md-6 mb-4">
+                    <h2 class="display-1 text-center"><span>R</span>egister</h2>
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-md-6 pe-1">
+                            
+                            <label for="name" class="mb-2">
+                                <h4>Name</h4>
+                            </label>
+                            <input class="w-100 form-control mb-2" formControlName="name" type="text" name="" id="name"
+                                placeholder="Enter Your Name...">
+                            <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched"
+                                class="alert alert-danger">
+                                <p *ngIf="registerForm.get('name')?.getError('required')">User Name is Required</p>
+                                <p *ngIf="registerForm.get('name')?.getError('pattern')">User Name Must Start With
+                                    Uppercase</p>
+                                <p *ngIf="registerForm.get('name')?.getError('minlength')">Min length 3</p>
+                                <p *ngIf="registerForm.get('name')?.getError('maxlength')">max length 20</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ps-1">
+                            <label for="email" class="mb-2">
+                                <h4>E-mail</h4>
+                            </label>
+                            <input class="w-100 form-control mb-2" formControlName="email" type="email" name=""
+                                id="email" placeholder="Enter Your E-mail...">
+                            <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched"
+                                class="alert alert-danger">
+                                <p *ngIf="registerForm.get('email')?.getError('required')">Email is required</p>
+                                <p *ngIf="registerForm.get('email')?.getError('email')">Enter Valid Email</p>
+                                <p *ngIf="registerForm.get('email')?.getError('pattern')">Email Must End by ".com" or
+                                    ".net"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-md-6 pe-1">
+                            <label for="password" class="mb-2">
+                                <h4>Password</h4>
+                            </label>
+                            <input (keyup)="matchRepassword()" class="w-100 form-control mb-2"
+                                formControlName="password" type="password" name="" id="password"
+                                placeholder="Enter Your Password...">
+                            <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched"
+                                class="alert alert-danger">
+                                <p *ngIf="registerForm.get('password')?.getError('required')">Password is required</p>
+                                <p *ngIf="registerForm.get('password')?.getError('pattern')">Minimum Six characters,
+                                    at least one upper
+                                    case English letter, one lower case English letter, one number and one special
+                                    character</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ps-1">
+                            <label for="re-password" class="mb-2">
+                                <h4>Re-Password</h4>
+                            </label>
+                            <input (keyup)="matchRepassword()" class="w-100 form-control mb-2"
+                                formControlName="rePassword" type="password" name="" id="re-password"
+                                placeholder="Re-Password...">
+
+                            <div *ngIf="!rePasswordIsValid && registerForm.get('rePassword')?.touched"
+                                class="alert alert-danger">
+                                <p>Password is not matched</p>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="re-password" class="mb-2">
+                        <h4>Phone</h4>
+                    </label>
+                    <input class="w-100 form-control mb-2" formControlName="phone" type="text" name="" id="phone"
+                        placeholder="Enter Your Phone Number...">
+                    <button type="submit" [disabled]="!registerForm.valid" class="btn btn-main-solid mt-3 w-100">Register</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>

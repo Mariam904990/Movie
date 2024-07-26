@@ -1,0 +1,16 @@
+.btn-scroll {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px;
+    position: fixed;
+    bottom: 105%;
+    right: 50px;
+    background-color: #E4D804;
+    transition: .6s;
+    opacity: 0;
+}
+.btn-bottom {
+    bottom: 50px;
+    opacity: 1;
+}

@@ -1,0 +1,21 @@
+section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/breadcrumb_bg.jpg") center no-repeat;
+    background-size: cover;
+
+    .form-control {
+        background-color: #12151E;
+        color: #FFF;
+        outline: none;
+        border: none;
+        padding: 10px 20px;
+        box-shadow: 0 0 5px inset #2b2a2a;
+
+        &::placeholder,
+        &:-ms-input-placeholder,
+        &::-ms-input-placeholder {
+            color: #646262;
+            opacity: 1;
+        }
+    }
+
+}

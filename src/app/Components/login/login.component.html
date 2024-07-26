@@ -1,0 +1,28 @@
+<section class="m-0">
+    <div class="container">
+        <form (ngSubmit)="login(loginForm)" [formGroup]="loginForm">
+            <div class="row vh-100 align-items-center justify-content-center">
+                <div class="col-md-6 mb-4">
+                    <h2 class="display-1 text-center"><span>L</span>ogin</h2>
+                    <label for="email" class="mb-2">
+                        <h4>E-mail</h4>
+                    </label>
+                    <input class="w-100 form-control mb-3" formControlName="email" type="email" name="" id="email"
+                        placeholder="Enter Your E-mail...">
+
+                    <label for="password" class="mb-2">
+                        <h4>Password</h4>
+                    </label>
+                    <input class="w-100 form-control mb-3" formControlName="password" type="password" name=""
+                        id="password" placeholder="Enter Your Password...">
+
+                    <button type="submit" class="btn btn-main-solid mt-3 w-100">Login</button>
+                    <div *ngIf="errorMsg" class="alert alert-danger my-2">
+                        {{errorMsg}}
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>

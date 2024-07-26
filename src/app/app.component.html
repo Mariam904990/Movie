@@ -1,0 +1,8 @@
+<router-outlet></router-outlet>
+<ngx-spinner bdColor="#171d22" size="large" color="#fff" [fullScreen]="true"
+    class="d-flex align-items-center justify-content-center">
+    <img src="./assets/preloader.svg" alt="">
+</ngx-spinner>
+
+<button class="btn btn-scroll" (click)="goUp()" [ngClass]="scrollBtn? 'btn-bottom' : ''"><i
+        class="fa-solid fa-angle-up"></i></button>

@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+body {
+    color: #FFF;
+    background-color: #3e3e3e;
+}
+
+* {
+    font-weight: 700 !important;
+    transition: .3s;
+    letter-spacing: .5px;
+}
+
+.btn-main-light {
+    background-color: #E4D804;
+    border: 2px solid #E4D804;
+    color: #12151E;
+    border-radius: 50px;
+    padding: 10px 30px;
+    box-shadow: 0 0 5px #aeaeae;
+    
+    &:hover {
+        background: transparent;
+        color: #12151E;
+        border: 2px solid #E4D804;
+        box-shadow: none;
+    }
+}
+
+.btn-main-solid {
+    background-color: #12151E;
+    border: 3px solid #E4D804;
+    color: #FFF;
+    border-radius: 50px;
+    padding: 10px 30px;
+
+    &:hover {
+        background-color: #E4D804;
+        color: #12151E;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E4D804 !important;
+}
+
+span {
+    color: #E4D804 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900 !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

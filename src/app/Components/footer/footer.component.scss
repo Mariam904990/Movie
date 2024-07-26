@@ -1,0 +1,114 @@
+.footer {
+    .sec-1 {
+        background-image: url(../../../assets/newsletter_bg.jpg);
+
+        button {
+            position: absolute;
+            top: 2.5px;
+            right: 15.5px;
+            padding: 15px 30px;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            background-color: black;
+            color: #E4D804;
+        }
+
+
+        input {
+            padding: 18px;
+            outline: none;
+            border: none;
+            box-shadow: 0 0 5px #CCC;
+            border-radius: 3px;
+        }
+    }
+
+    .sec-2 {
+        background-image: url(../../../assets/footer_bg.jpg);
+        color: #CCC;
+
+        h3 {
+            position: relative;
+            color: #FFF;
+            letter-spacing: 1px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -15px;
+                width: 75px;
+                height: 3px;
+                background-color: #E4D804;
+                border-radius: 3px;
+            }
+        }
+
+        a,
+        .small {
+            color: #CCC;
+            font-weight: 400 !important;
+        }
+
+        .icons .icon {
+            width: 40px;
+            height: 40px;
+            // background-color: #a90;
+            border-radius: 2px;
+            color: #FFF;
+            font-size: 20px;
+        }
+
+        .f-bg {
+            background-color: #3B5998;
+        }
+
+        .twitter-bg {
+            background-color: #55ACEE;
+        }
+
+        .pinterest-bg {
+            background-color: #D71E18;
+        }
+
+        .linkedin-bg {
+            background-color: #1565C0;
+        }
+
+        input {
+            width: 170% !important;
+            padding: 10px 20px;
+            background-color: #12151E;
+            border: none;
+            box-shadow: 0 0 5px black inset;
+            outline: none;
+            color: #EEE;
+        }
+
+        button {
+            position: absolute;
+
+            width: 40px;
+            height: 40px;
+            top: 2px;
+            right: -86px;
+
+            background-color: #181C29;
+            color: #E4D804;
+            padding: 5px;
+            border-radius: 50%;
+            border: none;
+        }
+
+        .position-relative {
+            margin: 0 !important;
+        }
+
+    }
+
+    .sec-3 {
+        background-color: #171B22;
+        color: #CCC;
+    }
+}

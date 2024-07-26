@@ -1,0 +1,48 @@
+section {
+    background: url("../../../assets/tv_series_bg.jpg");
+
+    .tv-span{
+        color: #CCC !important;
+        font-weight: 400 !important; 
+        &::before {
+            content: "";
+            position: absolute;
+            // top: 0;
+            // left: 0;
+            width: 38px;
+            height: 2px;
+            background-color: #E4D804;
+            // margin-right: 3rem;
+            transform: translateX(-45px);
+        }
+    }
+    p {
+        color: #CCC;
+    }
+
+    .hr {
+        border-top: 1px dashed #464646ad;
+    }
+
+    .icons .row {
+        &:hover {
+            .icon {
+                border-color: #12151E;
+                background-color: #E4D804;
+                color: #12151E;
+            }
+        }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            // background-color: #a90;
+            border-radius: 50%;
+            font-size: 2.7rem;
+            outline: 1px dashed #E4D804;
+            border: 5px solid #12151e00;
+        }
+    }
+
+
+}

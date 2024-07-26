@@ -1,0 +1,28 @@
+
+section {
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url("../../../assets/movie_details_bg.jpg") center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .genres{
+        font-weight: 400 !important;
+        font-size: 15px !important;
+        &:hover {
+            color: #E4D804 !important;
+        }
+    }
+}
+.recommended {
+    h5 {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            top: 120%;
+            left: 0;
+            height: 3px;
+            width: 100px;
+            background-color: #E4D804;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let item of this.Cartona">
+        <ng-template carouselSlide>
+            <div class="p-4">
+                <app-card [element]="item" [key]="key" [person]="person"></app-card>
+            </div>
+        </ng-template>
+    </ng-container>
+</owl-carousel-o>
